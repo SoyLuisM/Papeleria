@@ -7,7 +7,7 @@ const router = require('./src/network/routes');
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-//aqui van las url
+//aquí se mandan a llamar las rutas existentes
 router(app)
 
 app.listen(config.port,() => {
