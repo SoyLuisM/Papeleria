@@ -32,5 +32,10 @@ class mongoAtlas{
                   return db.collection(collection).find(query).toArray();
             })
       }
+      create(collection, data){
+            return this.connect().then(db => {
+                  return db.collection(collection).insertOne(data)
+            }).then(result => result.insertId);
+      }
 }
 module.exports = mongoAtlas
