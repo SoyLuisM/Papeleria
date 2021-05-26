@@ -1,4 +1,4 @@
-# PapeleriaBDD
+# Papeleria
 Proyecto para la materia de sistemas distribuidos impartido en la UPIITA
 
 ### Instalacion
