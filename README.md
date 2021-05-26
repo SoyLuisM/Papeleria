@@ -1,5 +1,5 @@
 # PapeleriaBDD
-Proyecto para la materia de bases de datos distribuidas impartido en la UPIITA
+Proyecto para la materia de sistemas distribuidos impartido en la UPIITA
 
 ### Instalacion
 ```
