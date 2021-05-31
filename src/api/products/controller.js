@@ -1,6 +1,6 @@
 const { nanoid } = require("nanoid")
 
-const TABLE = "products"
+const TABLE = "catalogo_producto"
 
 module.exports = function (store){
 

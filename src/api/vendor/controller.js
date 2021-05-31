@@ -1,5 +1,5 @@
 const { nanoid } = require("nanoid")
-const TABLE = "Vendedor"
+const TABLE = "empleado"
 
 module.exports = function (store){
       async function list(){
