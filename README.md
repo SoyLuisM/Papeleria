@@ -29,10 +29,10 @@ npm run dev
 - [x] GET `/api/categories/id` buscar una categoria
 
 ### CRUD de proveedores
-- [ ] GET `/api/prov/` Endpoint para retornar la lista de proveedores.
-- [ ] POST `/api/prov/` Endpoint para dar de alta a un proveedor
-- [ ] PATCH `/api/prov/:id` modificar los detallles de un proveedor
-- [ ] GET `/api/prov/id` buscar un proveedor
+- [x] GET `/api/prov/` Endpoint para retornar la lista de proveedores.
+- [x] POST `/api/prov/` Endpoint para dar de alta a un proveedor
+- [x] PATCH `/api/prov/:id` modificar los detallles de un proveedor
+- [x] GET `/api/prov/id` buscar un proveedor
 
 ### CRUD de pedidos
 - [ ] GET `/api/order/` Endpoint para retornar la lista de pedidos.
