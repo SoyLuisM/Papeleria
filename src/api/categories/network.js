@@ -7,6 +7,7 @@ const router = express.Router()
 //estos son los metodos existentes
 router.get('/', list)
 router.post('/', insertCategorie)
+router.patch('/:id', update)
 
 //a partir de aqui se implementan las funciones necesarias
 function list(req, res, next){
@@ -20,5 +21,11 @@ function insertCategorie(req, res, next){
           .then((data => {
                 response.success(req, res, data, 201)
           })).catch(next)
+}
+function update(req, res, next){
+      controller.update(req.params.id,req.body)
+            .then(data => {
+                  response.success(req, res, data, 200)
+            }).catch(next)
 }
 module.exports = router

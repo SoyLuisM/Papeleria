@@ -18,9 +18,17 @@ module.exports = function (store){
             
             return result;
       }
+      async function update(id, data){
+            let result
+
+            result = await store.update(TABLE,id, data);
+            
+            return result;
+      }
 
       return {
             list,
-            insertProduct
+            insertProduct,
+            update,
       }
 }
