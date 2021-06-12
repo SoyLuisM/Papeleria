@@ -72,9 +72,9 @@ function listOne(table, id){
       })
 }
 
-function update(table, data){
+function update(table, data, id){
       return new Promise((resolve, reject) => {
-            connection.query(`UPDATE ${table} SET ? WHERE id=?`, [data, data.id], (err, result) => {
+            connection.query(`UPDATE ${table} SET ? WHERE id=?`, [data, id], (err, result) => {
                   if(err){
                         return reject(err)
                   }

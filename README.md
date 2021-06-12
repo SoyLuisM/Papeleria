@@ -19,8 +19,8 @@ npm run dev
 ### CRUD de vendedores
 - [x] GET `/api/vendor/` Endpoint para retornar la lista de vendedores.
 - [x] POST `/api/vendor/` Endpoint para dar de alta a un vendedor.
-- [ ] PATCH `/api/vendor/:id` modificar a un empleado
-- [ ] GET `/api/vendor/id` buscar un vendedor
+- [x] PATCH `/api/vendor/:id` modificar a un empleado
+- [x] GET `/api/vendor/id` buscar un vendedor
 
 ### CRUD de categorias
 - [x] GET `/api/categories/` Endpoint para retornar la lista de categorias.

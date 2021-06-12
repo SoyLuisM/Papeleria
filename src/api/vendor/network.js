@@ -8,6 +8,8 @@ const router = express.Router()
 //registro de rutas
 router.get('/', list)
 router.post('/', insertVendor)
+router.patch('/:id', update)
+router.get('/:id', listOne)
 
 //implenetacion de funciones
 function list(req, res, next){
@@ -18,6 +20,20 @@ function list(req, res, next){
 }
 function insertVendor(req, res, next){
       controller.insertVendor(req.body,null)
+            .then((data => {
+                  response.success(req, res, data, 201)
+            })).catch(next)
+}
+
+function update(req, res, next){
+      controller.update(req.params.id, req.body)
+            .then((data => {
+                  response.success(req, res, data, 201)
+            })).catch(next)
+}
+
+function listOne(req, res, next){
+      controller.listOne(req.params.id)
             .then((data => {
                   response.success(req, res, data, 201)
             })).catch(next)
