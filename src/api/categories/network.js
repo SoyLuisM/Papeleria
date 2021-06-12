@@ -33,7 +33,7 @@ function listOne(req, res, next){
       controller.listOne(req.params.id)
             .then((lista) => {
                   response.success(req, res, lista, 200)
-            }).catch(next);
+            }).catch(next)
       //la funcion next se incluye en los middlewre de expres por defecto
 }
 module.exports = router

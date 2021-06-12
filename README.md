@@ -13,8 +13,8 @@ npm run dev
 ### CRUD de productos
 - [X] GET `/api/products/` Endpoint para retornar la lista de productos.
 - [X] POST `/api/products/` Endpoint para crear un producto.
-- [ ] PATCH `/api/poducts/:id` Modificar las caracteristicas de un producto 
-- [ ] GET `/api/products/:id` buscar un producto 
+- [x] PATCH `/api/poducts/:id` Modificar las caracteristicas de un producto 
+- [x] GET `/api/products/:id` buscar un producto 
 
 ### CRUD de vendedores
 - [ ] GET `/api/vendor/` Endpoint para retornar la lista de vendedores.
