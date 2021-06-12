@@ -41,10 +41,10 @@ npm run dev
 - [ ] GET `/api/order/id` buscar un pedido
 
 ### CRUD de usuarios
-- [ ] GET `/api/user/` Endpoint para retornar la lista usuarios.
-- [ ] POST `/api/user/` Endpoint para crear un usuario
-- [ ] PATCH `/api/user/:id` modificar los detallles de un usuario
-- [ ] GET `/api/user/id` buscar un usuario
+- [x] GET `/api/user/` Endpoint para retornar la lista usuarios.
+- [x] POST `/api/user/` Endpoint para crear un usuario
+- [x] PATCH `/api/user/:id` modificar los detallles de un usuario
+- [x] GET `/api/user/id` buscar un usuario
 
 ### CRUD de puestos
 - [ ] GET `/api/job/` Endpoint para retornar la lista de puestos.
