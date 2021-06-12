@@ -5,9 +5,19 @@ Proyecto para la materia de sistemas distribuidos impartido en la UPIITA
 ```
 npm install
 ```
+
+### Ejecución en produccion
+para desplegar cree el archivo ".env" y copie los datos del archivo ".env_example",
+llene los datos con los y ejecute alguno de los siguientes comandos
+
 ### Ejecución en desarrollo
 ```
 npm run dev
+```
+
+### Ejecución en produccion
+```
+npm run prod
 ```
 
 ### CRUD de productos
