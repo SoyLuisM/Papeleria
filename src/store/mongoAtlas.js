@@ -37,5 +37,16 @@ class mongoAtlas{
                   return db.collection(collection).insertOne(data)
             }).then(result => result.insertId);
       }
+      list(collection, id){
+            return this.connect().then(db => {
+                  return db.collection(collection).findOne({ _id : id});
+            })
+      }
+      update(collection, id, data){
+            return this.connect().then(db => {
+                  return db.collection(collection).updateOne({ _id: id },{ $set: data}, { upsert: true})
+            }).then(result => result.upsertedId || id);
+      }
+      
 }
 module.exports = mongoAtlas

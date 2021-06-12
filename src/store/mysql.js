@@ -59,7 +59,33 @@ function create(table, data){
             
       })
 }
+
+function listOne(table, id){
+      return new Promise((resolve, reject) => {
+            connection.query(`SELECT * FROM ${table} WHERE id='${id}';`, (err, data) => {
+                  if(err){
+                        return reject(err)
+                  }
+                  resolve(data)
+            })
+            
+      })
+}
+
+function update(table, data){
+      return new Promise((resolve, reject) => {
+            connection.query(`UPDATE ${table} SET ? WHERE id=?`, [data, data.id], (err, result) => {
+                  if(err){
+                        return reject(err)
+                  }
+                  resolve(result)
+            })
+            
+      })
+}
 module.exports = {
       listAll,
-      create
+      create,
+      listOne,
+      update,
 }
