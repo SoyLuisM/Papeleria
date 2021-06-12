@@ -37,7 +37,7 @@ class mongoAtlas{
                   return db.collection(collection).insertOne(data)
             }).then(result => result.insertId)
       }
-      list(collection, id){
+      listOne(collection, id){
             return this.connect().then(db => {
                   return db.collection(collection).findOne({ _id : id})
             })

@@ -26,7 +26,7 @@ npm run dev
 - [x] GET `/api/categories/` Endpoint para retornar la lista de categorias.
 - [x] POST `/api/categories/` Endpoint para crear una categoria
 - [x] PATCH `/api/categories/:id` modificar los detallles de una categoria
-- [ ] GET `/api/categories/id` buscar una categoria
+- [x] GET `/api/categories/id` buscar una categoria
 
 ### CRUD de proveedores
 - [ ] GET `/api/prov/` Endpoint para retornar la lista de proveedores.

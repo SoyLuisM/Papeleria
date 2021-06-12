@@ -8,6 +8,7 @@ const router = express.Router()
 router.get('/', list)
 router.post('/', insertCategorie)
 router.patch('/:id', update)
+router.get('/:id', listOne)
 
 //a partir de aqui se implementan las funciones necesarias
 function list(req, res, next){
@@ -27,5 +28,12 @@ function update(req, res, next){
             .then(data => {
                   response.success(req, res, data, 200)
             }).catch(next)
+}
+function listOne(req, res, next){
+      controller.listOne(req.params.id)
+            .then((lista) => {
+                  response.success(req, res, lista, 200)
+            }).catch(next);
+      //la funcion next se incluye en los middlewre de expres por defecto
 }
 module.exports = router

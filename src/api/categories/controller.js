@@ -25,10 +25,13 @@ module.exports = function (store){
             
             return result;
       }
-
+      function listOne(id){
+            return store.listOne(TABLE, id)
+      }
       return {
             list,
             insertProduct,
             update,
+            listOne,
       }
 }
