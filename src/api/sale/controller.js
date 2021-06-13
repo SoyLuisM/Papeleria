@@ -3,8 +3,14 @@ const TABLE = "ventas"
 const TABLE2 = "producto_venta"
 
 module.exports = function (store){
+
+    async function list(){
+        const result = await store.listAll(TABLE);
+        return result;
+    } 
+
     async function sale(id_empleado,list_products){
-        //sedebe calcular el total y subtotal a aprtir de la lista de productos
+        //se debe calcular el total y subtotal a aprtir de la lista de productos
         let data_venta = {
             id : nanoid(),
             fecha: new Date(),
@@ -25,8 +31,17 @@ module.exports = function (store){
         result = await store.create(TABLE, data_venta);
 
         return result;
-  }
+    }
+
+    async function listOne(id){
+            
+        result = await store.listOne(TABLE, id)
+        return result
+    }
+
     return {
+        list,
         sale,
+        listOne
   }
 }

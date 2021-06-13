@@ -63,6 +63,6 @@ npm run prod
 - [x] GET `/api/job/id` buscar un puesto
 
 ### CRUD de ventas
-- [ ] GET `/api/sale/` Endpoint para retornar la lista de compras hechas
+- [x] GET `/api/sale/` Endpoint para retornar la lista de compras hechas
 - [x] POST `/api/sale/empleado/:id` Endpoint para realiza una venta/compra
-- [ ] GET `/api/sale/id` buscar una venta
+- [x] GET `/api/sale/:id` buscar una venta
