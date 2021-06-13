@@ -45,7 +45,7 @@ npm run prod
 - [x] GET `/api/prov/id` buscar un proveedor
 
 ### CRUD de pedidos
-- [ ] GET `/api/order/` Endpoint para retornar la lista de pedidos.
+- [ ] GET `/api/order/prov/:id` Endpoint para retornar la lista de pedidos.
 - [ ] POST `/api/order/` Endpoint para crear un pedido
 - [ ] PATCH `/api/order/:id` modificar los detallles de un pedido
 - [ ] GET `/api/order/id` buscar un pedido
@@ -64,6 +64,5 @@ npm run prod
 
 ### CRUD de ventas
 - [ ] GET `/api/sale/` Endpoint para retornar la lista de compras hechas
-- [ ] POST `/api/sale/` Endpoint para realiza una venta/compra
-- [ ] PATCH `/api/sale/:id` modificar los detallles de una venta/compra
+- [x] POST `/api/sale/empleado/:id` Endpoint para realiza una venta/compra
 - [ ] GET `/api/sale/id` buscar una venta
