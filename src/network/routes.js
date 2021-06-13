@@ -5,6 +5,7 @@ const users = require('../api/users/network')
 const jobs = require('../api/jobs/network')
 const providers = require('../api/provider/network')
 const sale = require('../api/sale/network')
+const order = require('../api/order/network')
 
 const routes = (server) => {
       server.use('/api/products', products)
@@ -14,7 +15,7 @@ const routes = (server) => {
       server.use('/api/jobs', jobs)
       server.use('/api/provider', providers)
       server.use('/api/sale', sale)
-      
+      server.use('/api/order', order)  
 }
 
 module.exports = routes
