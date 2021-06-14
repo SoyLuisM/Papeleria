@@ -1,12 +1,14 @@
 const { nanoid } = require("nanoid")
 
-const TABLE = "catalogo_producto"
+const TABLE = "productos"
 
 module.exports = function (store){
 
       async function list(){
             //el nul que se envia se puede sustituir por un query para filtar los resultados
-            const result = await store.listAll(TABLE,null);
+            
+            const result = await store.getAllUsers(TABLE,null);
+            
             return result;
       } 
 

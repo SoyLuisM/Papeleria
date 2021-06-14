@@ -1,4 +1,4 @@
 const controller = require('./controller');
-const store = require("../../store/mongoAtlas");
+const store = require("../../store/APIarchivos");
 
-module.exports = controller(new store);
+module.exports = controller(store);
