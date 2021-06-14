@@ -7,7 +7,7 @@ module.exports = function (store){
       async function list(){
             //el nul que se envia se puede sustituir por un query para filtar los resultados
             
-            const result = await store.getAllUsers(TABLE,null);
+            const result = await store.getAll(TABLE,null);
             
             return result;
       } 
@@ -30,7 +30,7 @@ module.exports = function (store){
       }
 
       function listOne(id){
-            return store.listOne(TABLE, id)
+            return store.getOne(TABLE, id)
       }
 
       return {
