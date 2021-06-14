@@ -15,7 +15,7 @@ module.exports = function (store){
       async function insertProduct(data,id){
             let result
 
-            data._id = nanoid();
+            data.id = nanoid();
             result = await store.create(TABLE, data);
             
             return result;

@@ -1,5 +1,5 @@
 const http = require('http');
-const response = require('../network/response')
+const axios = require('axios')
 const host = '192.168.100.29';
 const port = '80';
 
@@ -21,10 +21,10 @@ exports.getAll = (TABLE, datos) =>{
             let response = null
             res.on('data', function (chunk) {
                 // Cada vez que se recojan datos se agregan a la variable
-                data += chunk;
+                data += chunk
             }).on('end', function () {
              
-                response = JSON.parse(data);
+                response = JSON.parse(data)
                 //al terminar de recibir la informacion se resuleve la promesa con el resultado
                 resolve(response)
                 
@@ -88,42 +88,22 @@ exports.getOne = (TABLE, datos) =>{
 
 exports.update = (TABLE, id, datos) =>{
     
-    return new Promise((resolve,reject)=>{
-        
-        const path = `/${TABLE}/${id}`
-        let options = {
-                    host: host,
-                    port: port,
-                    path: path,
-                    method: 'PATCH'
-                }
-                
-        const req = http.request(options, (res)=> {
-            let data = ''
-            let response = null
-            res.on('data', function (chunk) {
-                // Cada vez que se recojan datos se agregan a la variable
-                data += chunk;
-            }).on('end', function () {
-             
-                response = JSON.parse(datos);
-                //al terminar de recibir la informacion se resuleve la promesa con el resultado
-                resolve(response)
-                
-            })
-            .on('error', function(err) {
-                // Si hay errores los sacamos por consola
-                console.error('Error al procesar el mensaje: ' + err)
-                reject(err)
-            })
-            .on('uncaughtException', function (err) {
-                // Si hay alguna excepción no capturada la sacamos por consola
-                console.error(err)
-            })
-        })
-        if (datos) {
-            req.write(datos)
+    return new Promise(async (resolve,reject)=>{
+        const result = await axios.patch(`http://${host}/${TABLE}/${id}`,datos)
+        if(result.data.error===true){
+            reject(result.data.error)
         }
-        req.end()
+        resolve(result.data)
+    })
+}
+
+exports.create = (TABLE, datos) =>{
+    
+    return new Promise(async (resolve,reject)=>{
+        const result = await axios.post(`http://${host}/${TABLE}`,datos)
+        if(result.data.error===true){
+            reject(result.data.error)
+        }
+        resolve(result.data)
     })
 }
