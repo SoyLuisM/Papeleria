@@ -29,9 +29,9 @@ process.on('uncaughtException',error =>{
 setInterval(alertMem,3000)
 
 function alertMem(){
-      free = os.freemem()
-      total = os.totalmem()
-      porcentaje = ((free/1024)*100)/(total/1024)
+      let free = os.freemem()
+      let total = os.totalmem()
+      let porcentaje = ((free/1024)*100)/(total/1024)
       if(porcentaje < 25){
             console.info(`memoria por debajo del ${porcentaje}%`)
       }
