@@ -35,7 +35,7 @@ module.exports = function (store){
 
     async function listOne(id){
             
-        result = await store.listOne(TABLE, id)
+        let result = await store.listOne(TABLE, id)
         return result
     }
 
