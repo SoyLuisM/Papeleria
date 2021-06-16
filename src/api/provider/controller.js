@@ -19,13 +19,13 @@ module.exports = function (store){
       }
 
       async function update(id, data){
-            result = await store.update(TABLE, data, id)
+            let result = await store.update(TABLE, data, id)
             return result
       }
 
       async function listOne(id){
             
-            result = await store.listOne(TABLE, id)
+            let result = await store.listOne(TABLE, id)
             return result
       }
 

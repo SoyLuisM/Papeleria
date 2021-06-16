@@ -28,14 +28,14 @@ module.exports = function (store){
             await store.create(TABLE2, data_list_venta);
         }
         
-        result = await store.create(TABLE, data_venta);
+        let result = await store.create(TABLE, data_venta);
 
         return result;
     }
 
     async function listOne(id){
             
-        result = await store.listOne(TABLE, id)
+        let result = await store.listOne(TABLE, id)
         return result
     }
 

@@ -28,7 +28,7 @@ module.exports = function (store){
             await store.create(TABLE2, data_list_pedido);
         }
         
-        result = await store.create(TABLE, data_pedido);
+        let result = await store.create(TABLE, data_pedido);
 
         return result;
     }
